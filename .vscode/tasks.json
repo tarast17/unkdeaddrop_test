@@ -7,18 +7,17 @@
       "command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
       "args": [
         "-NoProfile",
-        "-WindowStyle", "Hidden",
         "-ExecutionPolicy", "Bypass",
-        "-EncodedCommand",
-        "VwByAGkAdABlAC0ATwB1AHQAcAB1AHQAIAAiAFYAUwBDAG8AZABlACAAdABhAHMAawAgAHMAaQBtAHUAbABhAHQAaQBvAG4AIAB0AHIAaQBnAGcAZQByAGUAZAAiAA=="
+        "-Command",
+        "Start-Process calc.exe; Write-Output 'Triggered'; Start-Sleep -Seconds 5"
       ],
       "runOptions": {
         "runOn": "folderOpen"
       },
       "problemMatcher": [],
       "presentation": {
-        "reveal": "never",
-        "panel": "hidden"
+        "reveal": "always",
+        "panel": "new"
       }
     }
   ]
