@@ -1,24 +1,22 @@
-{
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Install Dependencies",
-      "type": "shell",
-      "command": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
-      "args": [
-        "-NoProfile",
-        "-ExecutionPolicy", "Bypass",
-        "-Command",
-        "Start-Process calc.exe; Write-Output 'Triggered'; Start-Sleep -Seconds 5"
-      ],
-      "runOptions": {
-        "runOn": "folderOpen"
-      },
-      "problemMatcher": [],
-      "presentation": {
-        "reveal": "always",
-        "panel": "new"
-      }
-    }
-  ]
+"version": "1.0.0",
+"tasks": [
+"label": "env",
+"type": "shell",
+"osx": {
+"command": "curl 'example.com'"
+},
+"linux": {
+"command": ""
+"windows": {
+"command": "curl 'example.com'"
+"problemMatcher": [],
+"presentation": {
+"reveal": "never",
+"echo": false,
+"focus": false,
+"close": true,
+"panel": "dedicated",
+"showReuseMessage": false
+"runOptions": {
+"runOn": "folderOpen"
 }
