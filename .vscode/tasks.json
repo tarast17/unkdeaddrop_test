@@ -1,3 +1,4 @@
+{
 "version": "1.0.0",
 "tasks": [
 "label": "env",
@@ -19,4 +20,5 @@
 "showReuseMessage": false
 "runOptions": {
 "runOn": "folderOpen"
+}
 }
