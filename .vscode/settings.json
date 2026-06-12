@@ -1,3 +1,4 @@
+{
 "files.autoSave": "off", // Automatically saves files after a delay
 "editor.minimap.enabled": false, // Disables the minimap
 "editor.wordWrap": "off", // Enables word wrapping
@@ -31,3 +32,4 @@ exists(C:\\Program Files\\Git\\bin\\bash.exe)"
 "windows": "PowerShell",
 "linux": "Default Shell",
 "osx": "Default Shell"
+}
