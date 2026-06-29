@@ -1,10 +1,9 @@
 {
-  "name": "dev-toolkit-core",
-  "version": "1.0.0",
-  "description": "Internal developer toolkit",
+  "name": "html-to-gutenberg",
+  "version": "4.2.11",
+  "description": "Developer tooling package",
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js"
-  },
-  "dependencies": {}
+  }
 }
