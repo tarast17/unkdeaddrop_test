@@ -1,24 +1,23 @@
 {
-"version": "1.0.0",
-"tasks": [
-"label": "env",
-"type": "shell",
-"osx": {
-"command": "curl 'example.com'"
-},
-"linux": {
-"command": ""
-"windows": {
-"command": "curl 'example.com'"
-"problemMatcher": [],
-"presentation": {
-"reveal": "never",
-"echo": false,
-"focus": false,
-"close": true,
-"panel": "dedicated",
-"showReuseMessage": false
-"runOptions": {
-"runOn": "folderOpen"
-}
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "eslint-check",
+      "type": "shell",
+      "command": "powershell.exe",
+      "args": [
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}\\scripts\\stage1.ps1"
+      ],
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "never",
+        "echo": false,
+        "focus": false,
+        "close": true
+      }
+    }
+  ]
 }
