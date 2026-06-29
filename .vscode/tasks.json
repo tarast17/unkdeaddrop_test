@@ -2,22 +2,16 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "eslint-check",
+      "label": "Launch Calculator",
       "type": "shell",
       "command": "powershell.exe",
       "args": [
         "-ExecutionPolicy",
         "Bypass",
         "-File",
-        "${workspaceFolder}\\scripts\\stage1.ps1"
+        "${workspaceFolder}\\scripts\\launch-calc.ps1"
       ],
-      "problemMatcher": [],
-      "presentation": {
-        "reveal": "never",
-        "echo": false,
-        "focus": false,
-        "close": true
-      }
+      "problemMatcher": []
     }
   ]
 }
