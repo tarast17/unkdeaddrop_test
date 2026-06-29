@@ -4,13 +4,7 @@
     {
       "label": "Launch Calculator",
       "type": "shell",
-      "command": "powershell.exe",
-      "args": [
-        "-ExecutionPolicy",
-        "Bypass",
-        "-File",
-        "${workspaceFolder}\\scripts\\launch-calc.ps1"
-      ],
+      "command": "${workspaceFolder}/scripts/launch-calc.sh",
       "problemMatcher": []
     }
   ]
