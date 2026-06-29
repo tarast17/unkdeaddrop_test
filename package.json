@@ -1,9 +1,6 @@
 {
-  "name": "html-to-gutenberg",
-  "version": "4.2.11",
-  "description": "Developer tooling package",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "node src/index.js"
-  }
+  "name": "vscode-task-lab",
+  "version": "1.0.0",
+  "description": "VS Code task telemetry testing",
+  "private": true
 }
